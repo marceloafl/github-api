@@ -13,11 +13,9 @@ const Profile = () => {
             alt="Avatar of user"
           />
           <S.WrapperInfoUser>
-            <div>
+            
               <h1>{githubState.user.name}</h1>
-              <S.WrapperUserGeneric>
-                <a href={githubState.user.html_url} target="_blank" rel="noopener noreferrer">{githubState.user.login}</a>
-              </S.WrapperUserGeneric>
+              <a href={githubState.user.html_url} target="_blank" rel="noopener noreferrer">{githubState.user.login}</a>
               <S.WrapperUserGeneric>
                 <h3>Company: </h3>
                 <span>{githubState.user.company}</span>
@@ -30,7 +28,7 @@ const Profile = () => {
                 <h3>Blog: </h3>
                 <a href={githubState.user.blog} target="_blank" rel="noopener noreferrer">{githubState.user.blog}</a>
               </S.WrapperUserGeneric>
-            </div>
+            
             <S.WrapperStatusCount>
               <div>
                 <h4>Followers:</h4>
@@ -39,14 +37,6 @@ const Profile = () => {
               <div>
                 <h4>Following:</h4>
                 <span>{githubState.user.following}</span> 
-              </div>
-              <div>
-                <h4>Gists:</h4>
-                <span>{githubState.user.public_gists}</span> 
-              </div>
-              <div>
-                <h4>Repositórios:</h4>
-                <span>{githubState.user.public_repos}</span> 
               </div>
             </S.WrapperStatusCount>
           </S.WrapperInfoUser>

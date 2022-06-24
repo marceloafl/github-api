@@ -15,11 +15,14 @@ const Header = () => {
     return(
         <header>
             <S.WrapperHeader>
-                <input type="text"
-                    placeholder="Digite o username para pesquisar"
-                    onChange={(event) => setUsernameForSearch(event.target.value)}
-                />
-                <button type="submit" onClick={submitGetUser}><span>Buscar</span></button>
+                <S.WrapperTitle>Encontre usuários do Github e acesse seus repositórios</S.WrapperTitle>
+                <S.WrapperInput>
+                    <input type="text"
+                        placeholder="Digite o username para pesquisar"
+                        onChange={(event) => setUsernameForSearch(event.target.value)}
+                    />
+                    <button type="submit" onClick={submitGetUser}><span>Buscar</span></button>
+                </S.WrapperInput>
             </S.WrapperHeader>
         </header>
     )

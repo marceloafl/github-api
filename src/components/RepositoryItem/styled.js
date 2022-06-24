@@ -5,20 +5,18 @@ export const Wrapper = styled.div`
     border: 1px solid #CCC;
     border-radius: 8px;
     height: 180px;
-    margin: 16px;
+    margin: 8px;
+    overflow: hidden;
     padding: 8px;
     width: 40%;
+
+    @media(max-width: 640px){
+        width: 100%;
+    }
 `;
 
 export const WrapperTitle = styled.h2`
     font-size: 18px;
-    font-weight: bold;
-    margin: 8px 0;
-`;
-
-export const WrapperFullName = styled.h4`
-    color: #2D3748;
-    font-size: 16px;
     font-weight: bold;
     margin: 8px 0;
 `;
@@ -28,4 +26,9 @@ export const WrapperLink = styled.a`
     font-size: 16px;
     font-weight: bold;
     margin: 8px 0;
+`;
+
+export const WrapperDescription = styled.p`
+    font-size: 14px;
+    margin-top: 8px;    
 `;

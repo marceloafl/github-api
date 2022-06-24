@@ -23,8 +23,8 @@ const Repositories = () => {
                 selectedTabPanelClassName="is-selected"
                 >
                     <S.WrapperTablist>
-                        <S.WrapperTab>Repositories</S.WrapperTab>
-                        <S.WrapperTab>Starred</S.WrapperTab>
+                        <S.WrapperTab>Repositories<span> ({githubState.user.public_repos})</span></S.WrapperTab>
+                        <S.WrapperTab>Starred<span> ({githubState.starred.length})</span></S.WrapperTab>
                     </S.WrapperTablist>
                     <S.WrapperTabPanel>
                         <S.WrapperList> 
@@ -34,6 +34,7 @@ const Repositories = () => {
                                 name={item.name}
                                 linkToRepo={item.full_name}
                                 fullName={item.full_name}
+                                description={item.description}
                                 />
                             ))}
                         </S.WrapperList>
